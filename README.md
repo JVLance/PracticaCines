@@ -1,31 +1,10 @@
-# Adonis fullstack application
+# Aplicación de Cines, como práctica de Vuejs, Nodejs + Adonijs
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+La aplicación utiliza
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+1. Vuejs Como framwwork del frontend
+2. NodeJS como servidor
+3. Adonisjs como Framework de Nodejs
+4. JSON Web Tokens para autenticación
+5. MySQL como motor de base de datos (Se prevé cambiar a MongoDB tras terminar el curso)
 
-## Setup
-
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick
-```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
