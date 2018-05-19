@@ -1,4 +1,4 @@
-# Aplicación de Cines, como práctica de Vuejs, Nodejs + Adonijs
+# Aplicación de Cines, como práctica de Vuejs, Nodejs + Adonisjs
 
 La aplicación utiliza
 
