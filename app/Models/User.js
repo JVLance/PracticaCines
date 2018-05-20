@@ -2,6 +2,7 @@
 
 const Hash = use('Hash')
 const Model = use('Model')
+const Customer = use('App/Models/Customer')
 
 class User extends Model {
   static boot () {
@@ -15,7 +16,12 @@ class User extends Model {
       if (userInstance.password) {
         userInstance.password = await Hash.make(userInstance.password)
       }
-    })
+    });
+
+    this.addHook('afterCreate', async (userInstance) => {
+      let customer = new Customer();
+      userInstance.customer().save(customer);
+    });
   }
 
   /**
