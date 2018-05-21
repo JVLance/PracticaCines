@@ -15,7 +15,6 @@ class Movie extends Model {
     genres(){
         return this.belongsToMany('App/Models/Genre');
     }
-
 }
 
 module.exports = Movie

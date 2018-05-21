@@ -25,7 +25,7 @@ Route.group(() => {
     Route.get('genres', 'CinemaController.allGenres');
 
     Route.get('movies/:cinemaId/byCinema', 'MovieController.byCinema');
-    Route.get('movies/:cinemaId/byMovie', 'MovieController.byMovie');
+    Route.get('movies/:movieId/byMovie', 'MovieController.byMovie');
 
     Route.post('booking', 'BookingController.save').middleware(['auth:jwt']);
     Route.get('bookings/last', 'BookingController.last').middleware(['auth:jwt']);

@@ -16,7 +16,7 @@ class MovieShowing extends Model {
         return this.belongsTo('App/Models/Movie');
     }
 
-    movie_showing_time(){
+    movie_showing_times(){
         return this.belongsTo('App/Models/MovieShowingTime');
     }
 
@@ -26,6 +26,24 @@ class MovieShowing extends Model {
 
     cinema(){
         return this.belongsTo('App/Models/Cinema');
+    }
+
+    async getInfo(){
+        return this.loadMany({
+            movie_showing_times : (movie_showing_times) => {
+                movie_showing_times
+                .where('hour_to_show', '>=', new Date().getHours())
+                .with('bookings', (bookings) => {
+                    bookins.with('seats')
+                })
+            },
+            movie : (movie) => {
+                movie.with('genres', (genres) => {
+                    genres.select('genre_name')
+                })
+            },
+            room : null
+        });
     }
 }
 
