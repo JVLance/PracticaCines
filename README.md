@@ -2,7 +2,7 @@
 
 La aplicación utiliza
 
-1. Vuejs Como framwwork del frontend
+1. Vuejs Como framework del frontend
 2. NodeJS como servidor
 3. Adonisjs como Framework de Nodejs
 4. JSON Web Tokens para autenticación
